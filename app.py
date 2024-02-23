@@ -37,7 +37,7 @@ def create_item(name):
                 'price': request_data['price']
             }
             store['items'].append(new_item)
-            return new_item, 201 #201 es un mensaje de creacion exitosa
+            return new_item, 201 #Solo un mensaje de confirmación
     return {'message': 'Store not found'}, 404
 
 @app.get('/store/<string:name>')  # http://127.0.0.1:5000/store/<string:name>
